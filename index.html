@@ -1,72 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tapu Mondal | Portfolio</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tapu Mondal | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* 🔥 IMPORTANT FIX FOR STICKY NAVBAR SCROLL */
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+            /* navbar height অনুযায়ী */
+        }
+    </style>
+
 </head>
+
 <body>
 
-<nav class="navbar">
-    <div class="logo">Tapu Mondal</div>
-    <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
+    <nav class="navbar">
+        <div class="logo">Tapu Mondal</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#play-games">Play Games</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-<section id="home" class="hero">
-    <img src="image.jpg" class="profile-pic" alt="Tapu Mondal">
-    <h1>Hi, I'm Tapu Mondal</h1>
-    <h2><span id="typing"></span></h2>
-    <a href="#contact" class="btn">Contact Me</a>
-</section>
+    <section id="home" class="hero">
+        <img src="image.jpg" class="profile-pic" alt="Tapu Mondal">
+        <h1>Hi, I'm Tapu Mondal</h1>
+        <h2><span id="typing"></span></h2>
+        <a href="#contact" class="btn">Contact Me</a>
+    </section>
 
-<section id="about" class="section">
-    <h2>About Me</h2>
-    <p>I am a Computer Science Engineering student passionate about building real-world software solutions and improving my coding skills every day.</p>
-</section>
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p style="text-align: justify;">
+            Tapu Mondal is a Bangladeshi-born Computer Science and Engineering student, currently pursuing his Bachelor
+            of Technology degree at Sharda University. He is also working as a Research Assistant (RA) in the Department
+            of CSE, Sharda University, where he contributes to academic and technical projects.
 
-<section id="projects" class="section light-bg">
-    <h2>Projects</h2>
-    <div class="project-container">
+            <br><br>
 
-        <div class="project-card">
-            <h3>Portfolio Website</h3>
-            <p>Responsive website built using HTML, CSS & JavaScript.</p>
+            Apart from academics, he is also an author and a passionate coder with a strong interest in competitive
+            programming and
+            problem-solving.
+
+            <br><br>
+
+            He enjoys playing chess and continuously works on improving his analytical thinking skills.
+            He often finds himself deeply missing his best friend, Himi Chakrobarty, who holds a special place in his
+            life.
+        </p>
+    </section>
+
+    <section id="projects" class="section light-bg">
+        <h2>Projects</h2>
+        <div class="project-container">
+
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>Responsive website built using HTML, CSS & JavaScript.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Password Strength Checker</h3>
+                <p>Python program to validate password security.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Mini Game Project</h3>
+                <p>Interactive browser game using JavaScript.</p>
+            </div>
+
+            <!-- 🎮 FIXED TARGET ID HERE -->
+            <div class="project-card" id="play-games">
+                <h3>🎮 Play Games</h3>
+                <p>Click to access and play fun browser games.</p>
+                <button onclick="openPopup()" class="btn">Play</button>
+            </div>
+
         </div>
+    </section>
 
-        <div class="project-card">
-            <h3>Password Strength Checker</h3>
-            <p>Python program to validate password security.</p>
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+
+        <p>Email: 2025823351.tapu@sharda.ac.in</p>
+
+        <a href="https://www.linkedin.com/in/tapu-mondal10" target="_blank" class="btn">LinkedIn</a>
+        <a href="https://github.com/tapu-mondal" target="_blank" class="btn">GitHub</a>
+    </section>
+
+    <!-- ✅ POPUP -->
+    <div id="popup" class="popup" style="display:none;" onclick="closePopup(event)">
+        <div class="popup-box">
+            <h2>Enter Password</h2>
+            <input type="password" id="popupPass" placeholder="Password">
+            <button onclick="checkPassword()" class="btn">Enter</button>
+
+            <!-- 🔥 ID FIX -->
+            <p id="popup-error" style="color:red;"></p>
+
         </div>
-
-        <div class="project-card">
-            <h3>Mini Game Project</h3>
-            <p>Interactive browser game using JavaScript.</p>
-        </div>
-
     </div>
-</section>
 
-<section id="contact" class="section">
-    <h2>Contact</h2>
+    <footer>
+        <p>© 2026 Tapu Mondal. All Rights Reserved.</p>
+    </footer>
 
-    <p>Email: 2025823351.tapu@sharda.ac.in</p>
-
-    <a href="https://www.linkedin.com/in/tapu-mondal10" target="_blank" class="btn">LinkedIn</a>
-    <a href="https://github.com/tapu-mondal" target="_blank" class="btn">GitHub</a>
-</section>
-
-<footer>
-    <p>© 2026 Tapu Mondal. All Rights Reserved.</p>
-</footer>
-
-<script src="main.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
-
